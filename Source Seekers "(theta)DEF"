@@ -1,0 +1,452 @@
+If L:Goto J
+ClrDraw:Text(1,1,"THE WORLD WAS ONCE
+Text(13,1,"IN BALANCE, PUT
+Text(25,1,"THERE BY THE UVUTIANS.
+Text(37,1,"THEN, THE TERRORS
+Text(49,1,"SWEPT THROUGH THE":Pause :ClrDraw
+Text(1,1,"LAND, DISRUPTING
+Text(13,1,"THE PEACE. YOU, AN
+Text(25,1,"UNARMED CITIZEN,
+Text(37,1,"TAKE IT UPON
+Text(49,1,"YOURSELF TO RESTORE
+Pause :ClrDraw:Text(1,1,"BALANCE.
+Text(13,1,"ONLY THE TEN ARTIFACTS
+Text(25,1,"WILL SAVE THE WORLD...
+Text(37,1,"YOU WAKE.
+Pause :ClrDraw:3→A:Ans→B:1→M
+Lbl J:ClrHome:DelVar R:1→∆X
+"----------------→Str9
+"              →Str7
+If Xmax=94:Then:8→Z:16→θ:DelVar C
+Else:10→Z:26→θ:1→C:Str9+"----------→Str9:Str7+"          →Str7:End
+For(W,3,Z-1
+Output(W,1,"I
+For(V,3,Z-1
+Output(V,θ,"I
+End:End
+Output(2,1,Str9
+Output(Z,1,Str9
+Output(1,1,"LV.
+Output(1,4,M
+Output(1,6,"θ*
+Output(1,8,P
+If M=2:Goto 6:If M=3:Goto E:If M=4:Goto G:If M=5:Goto L:If M=6:Goto N:If M=7:Goto O:If M=8:Goto S:If M=9:Goto U:If M=10:Goto W:If M=11:Goto Y:If M=12:Goto Z
+Output(6,θ-1,"B
+Repeat R:getKey→K:If Ans
+Output(A,B," 
+min(Z-1,max(3,A+sum(DeltaList(Ans={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,Ans,"θ
+If K=23 or K=11:Goto B
+If B=θ-1 and A=6:Then:ClrDraw:Text(1,1,"FOUND A SPACE SHARD.
+Text(16,1,"IT IS A GLOWING
+Text(28,1,"PIECE OF METEOR.
+Pause :ClrDraw:4→A:Ans→B:1→R
+For(W,3,Z-1
+Output(W,2,Str7
+End:End:End
+Lbl 6:DelVar R:2→M
+Output(1,4,Ans
+Output(1,8,P
+Output(5,5,"⁻
+Output(Z-1,14,"S
+Repeat R:getKey→K:If Ans
+Output(A,B," 
+min(Z-1,max(3,A+sum(DeltaList(Ans={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,B,"θ
+If P≤0:Then:Lbl D:Output(3,2,"GAME OVER!
+2→P:1→R:4→A:A→B:Pause :For(W,3,Z-1:Output(W,2,Str7:End
+Menu("GAME OVER","CONTINUE",6,"QUIT",B:Else
+If A=Z-2 and B=θ-2:Then:9→P:Output(1,8,P:Else
+If K=23 or K=11:Then:Lbl B:ClrHome:1→R:Disp "SAVING...
+{A,B,M,P→ʟSSAVE:ClrHome:ClrDraw:Stop:Else
+If A=Z-1 and B=14:Then:P-1→P:4→A:A→B:Goto 6:Else
+If A=5 and B=5:Then:1→S:Output(1,θ-4,"SWORD
+Else
+If KS=21 and B<θ-1:Then:Output(A,B+1,"⁻
+rand(20-9C):Output(A,B+1," 
+If B=13 and A=Z-1:Then:Output(Z-1,14," 
+DelVar E:Text(1,1,"ENEMY DROPPED
+Text(13,1,"AN OLD GEM.
+Text(28,1,"LEGENDS SAY IT WAS
+Text(40,1,"PART OF A SWORD
+Text(52,1,"OWNED BY A HERO.
+Pause :ClrDraw:1→R:4→A:A→B
+For(W,3,Z-1:Output(W,2,Str7
+End:End:End:End:End:End:End:End:End
+Lbl E:DelVar R:3→M:Z-2→T:θ-2→U:T→I:U→E
+Output(1,4,M
+Output(1,8,P
+Output(1,θ-4,"SWORD
+Output(T,U,"S
+Repeat R:getKey→K:If Ans
+Output(A,B," 
+min(Z-1,max(3,A+sum(DeltaList(Ans={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,B,"θ
+Output(I,E," 
+If T<A:T+.5→T:If T>A:T-.5→T
+If U<B:U+.5→U:If U>B:U-.5→U
+int(T)→I:int(U)→E
+Output(I,E,"S
+If A=I and B=E:Then:P-1→P:For(W,3,Z-1:Output(W,2,Str7:End:Goto E:Else
+If P≤0:Then:Goto D:Else
+If K=23 or K=11:Goto B
+If K=21 and B<θ-1:Then:Output(A,B+1,"⁻
+rand(20-9C):Output(A,B+1," 
+If B=E-1 and A=I:Then:Output(Z-1,14," 
+DelVar E:Text(1,1,"ENEMY DROPPED A
+Text(13,1,"SOURCE SHARD
+Text(28,1,"LEGENDS SAY IT WAS
+Text(40,1,"ONCE ABLE TO CONTROL
+Text(52,1,"MINDS AND HEARTS.
+Pause :ClrDraw:1→R:4→A:A→B
+For(W,3,Z-1
+Output(W,2,Str7
+End:End:End:End:End:End
+Lbl G:4→M:"θ→Str1:DelVar R:Output(1,4,M:Output(1,8,P:Output(1,θ-4,"SWORD
+Output(3,2,"^
+Output(Z-1,θ-1,"V
+Repeat R:getKey→K:If Ans
+Output(A,B," 
+min(Z-1,max(3,A+sum(DeltaList(Ans={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,Ans,Str1
+If K=23 or K=11:Goto B
+If P≤0:Then:Goto D:Else
+If A=3 and B=2:Then:Output(3,2,"^
+"ʟ"→Str1:1→H:Else
+If AH=Z-1 and B=θ-1:Then:DelVar H:Output(Z-1,θ-1,"V
+Output(4,θ-1,"B
+"θ→Str1:1→I:Else
+If A=4 and BI=θ-1:Then:1→R:ClrDraw:Text(1,1,"FOUND A GLOWING BLADE
+Text(16,1,"IT IS A SHINING
+Text(28,1,"BLADE OF A SWORD.
+Pause :ClrDraw:4→A:A→B
+For(W,3,Z-1:Output(W,2,Str7
+End:End:End:End:End:End
+Lbl L:5→M:"θ→Str1:DelVar RDelVar I
+Output(1,4,M
+Output(1,8,P
+Output(1,θ-4,"SWORD
+Output(3,3,"^
+Output(Z-1,θ-2,"V
+Repeat R:getKey→K:If Ans
+Output(A,B," 
+min(Z-1,max(3,A+sum(DeltaList(Ans={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,Ans,Str1
+If K=23 or K=11:Goto B
+If P≤0:Then:Goto D:Else
+If A=3 and B=3:Then:"ʟ"→Str1:Output(3,3,"^
+1→H:Else
+If AH=Z-1 and B=θ-2:Then:DelVar H:Output(Z-1,θ-2,"V
+Output(4,θ-1,"S
+"θ→Str1:1→I:Else
+If A=4 and BI=θ-1:Then:P-1→P:4→A:A→B:For(W,3,Z-1:Output(W,2,Str7:End:Goto L:Else
+If K=21 and B<θ-1:Then:Output(A,B+1,"⁻
+rand(20-9C:Output(A,B+1," 
+If A=4 and BI=θ-2:Then:1→R:ClrDraw:Text(1,1,"ENEMY LEFT A
+Text(13,1,"SOURCE SHARD
+Text(28,1,"IT IS A GLOWING
+Text(41,1,"PIECE OF CRYSTAL.
+1→R:Pause :ClrDraw
+For(W,3,Z-1
+Output(W,2,Str7
+End:End:End:End:End:End:End:End:Text(1,1,"YOU PUT THE SHARD INTO
+Text(13,1,"YOUR BAG. YOU FEEL
+Text(25,1,"RUMBLING, AND BOTH
+Text(37,1,"SHARDS FLOAT OUT
+Text(49,1,"AND MERGE. IT NOW
+Pause :ClrDraw
+Text(1,1,"SHOWS A MAP LEADING"
+Text(13,1,"TO A CASTLE. YOU
+Text(25,1,"START WALKING, AND
+Text(37,1,"SOON GET THERE.":Pause :ClrDraw
+Lbl N:DelVar R:5→A:2→B:1→L:"H→Str8
+"==============→Str0
+If C:Then:Str0+"==========→Str0:End
+Output(4,2,Str0
+Output(Z,2,Str0
+Output(1,4,"B 
+Output(1,8,P
+Output(1,θ-4,"SWORD
+Output(6,θ,"A
+Repeat R:getKey→K:If Ans
+Output(A,B," 
+min(Z-1,max(5,A+sum(DeltaList(Ans={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,Ans,"θ
+If K=23 or K=11:Then:Goto B:Else
+If K=21 and B<θ-1:Then:Output(A,B+1,"⁻
+rand(20-9C):Output(A,B+1," 
+Else
+If A=6 and B=θ-1:Then:For(W,3,Z-1:Output(W,2,Str7:End
+1→R:Output(Z,1,Str9:Output(6,θ,"I
+End:End:End:End
+DelVar R:6→M:4→A:A→B
+Output(6,1,"A
+Output(1,4,M
+Output(1,8,P
+Output(1,θ-4,"SWORD
+Output(4,θ-2,"P
+θ-3→T
+Repeat R:getKey→K:If Ans
+Output(A,B," 
+min(Z-1,max(3,A+sum(DeltaList(Ans={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,Ans,"θ
+Output(4,T,"Z
+If K=23 or K=11:Goto B
+If P≤0:Then:Lbl P:Output(3,2,"GAME OVER!
+2→P:1→R:4→A:Ans→B:Pause :For(W,3,Z-1:Output(W,2,Str7:End
+Menu("GAME OVER","CONTINUE",N,"QUIT",B:Else
+If (T=B and A=4) or (A=4 and B=θ-2):Then:4→A:A→B:P-1→P:For(W,3,Z-1:Output(W,2,Str7:End:Goto N:Else
+If T=2:Then:Output(4,T," 
+θ-3→T:Else:T-1→T:Output(4,T+1," 
+If K=21 and B<θ-1:Then:Output(A,B+1,"⁻
+rand(20-9C):Output(A,B+1," 
+If A=4 and B=θ-3:Then:ClrDraw:Output(Z-1,14," 
+Text(1,1,"WIZARD DROPPED A
+Text(13,1,"SOURCE SHARD
+Text(28,1,"LEGENDS SAY IT WAS
+Text(40,1,"ONCE OWNED BY A RICH
+Text(52,1,"LANDOWNER.
+Pause :ClrDraw:Output(6,1,"I
+1→R:DelVar L:4→A:A→B
+For(W,3,Z-1:Output(W,2,Str7:End:1→R
+End:End:End:End:End:End
+Lbl O:DelVar R:7→M
+Output(1,4,M:Output(1,8,P:Output(1,θ-4,"SWORD
+Output(4,θ-1,"B
+Z-2→T
+Repeat R:getKey→K:If Ans
+Output(A,B," 
+min(Z-1,max(3,A+sum(DeltaList(Ans={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,B,"θ
+Output(Z-1,5,"T
+Output(T,5,".
+If K=23 or K=11:Goto B
+If P≤0:Goto P
+If A=T and B=5:Then:4→A:A→B:P-1→P:Goto O:Else
+If A=Z-1 and B=5:Then:4→A:A→B:P-1→P:Goto O:Else
+If T=3:Then:Output(T,5," ":Z-2→T:Else:T-1→T:Output(T+1,5," 
+If K=21 and B<θ-1:Then:Output(A,B+1,"⁻
+rand(20-9C):Output(A,B+1," 
+Output(4,θ-1,"B
+Else
+If A=4 and B=θ-1:Then:ClrDraw:Text(1,1,"FOUND A STRANGE MASK
+Text(16,1,"MARKINGS ON THE MASK
+Text(28,1,"SUGGEST THAT IT IS
+Text(40,1,"UVUTIAN.
+Pause :ClrDraw:1→R:4→A:A→B
+For(W,3,Z-1:Output(W,2,Str7
+End:End:End:End:End:End:End
+Lbl S:DelVar RDelVar H:8→M:4→A:Ans→B:1→I
+Output(1,4,M
+Output(1,8,P
+Output(1,θ-4,"SWORD
+Output(5,5,"+
+Repeat R:getKey→K:If Ans
+Output(A,B," 
+min(Z-1,max(3,A+sum(DeltaList(Ans={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,Ans,"θ
+Output(Z-2,2,"O
+Output(6,6,"/
+If K=23 or K=11:Then:Goto B:Else
+If P≤0:Then:Goto P:Else
+If K=21 and B<θ-1:Then:Output(A,B+1,"⁻
+rand(20-9C):Output(A,B+1," 
+Else
+If AI=5 and B=5 and P<9:Then:P+1→P:Output(1,8,P:DelVar I:Else
+If A=6 and B=6:Then:2→S:Output(1,θ-4,"S+MAG
+Else
+If K=21 and B<θ-1:Then:Output(A,B+1,"⁻
+rand(20-9C):Output(A,B+1," 
+Else
+If K=31 and B>3:Then:Output(A,B-2,"G
+:rand(20-9C):Output(A,B-2," 
+If A=Z-2 and B=4:Then:ClrDraw:Text(1,1,"YOUR MAGIC BROUGHT
+Text(13,1,"YOU A POINTY HAT
+Text(28,1,"IT IS TOO SMALL FOR
+Text(41,1,"YOU, BUT IT LOOKS
+Text(53,1,"COOL.
+Pause :ClrDraw:For(W,3,Z-1:Output(W,2,Str7):1→R
+End:End:End:End:End:End:End:End:End:End:4→A:Ans→B
+Lbl U:DelVar RDelVar IDelVar J:9→M:1→F:Ans→E
+Output(1,4,M:Output(1,8,P
+Output(1,θ-4,"S+MAG
+Output(3,θ-2,"S
+Output(Z-2,2,"S
+Repeat R:getKey→K:If Ans
+Output(A,B," 
+min(Z-1,max(3,A+sum(DeltaList(K={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,Ans,"θ
+If P≤0:Then:Goto P:Else
+If K=23 or K=11:Then:Goto B:Else
+If (AF=3 and B=θ-2) or (A=Z-2 and BE=2):Then:P-1→P:For(W,3,Z-1):Output(W,2,Str7):End:Goto U:Else
+If K=21 and B<θ-1:Then:Output(A,B+1,"⁻
+rand(20-9C:Output(A,B+1," 
+1→I:Else
+If AI=3 and B=θ-3:Then:DelVar F:Else
+If K=31 and B>3:Then:Output(A,B-2,"G
+rand(20-9C):Output(A,B-2," 
+1→J:Else
+If AJ=Z-2 and B=4:Then:DelVar E:Else
+If not(F+E):Then:Text(1,1,"ENEMY DROPPED
+Text(13,1,"AN EVIL HORN
+Text(31,1,"THIS HORN HAS THE
+Text(43,1,"MARK OF THE TERRORS.
+Pause :ClrDraw:For(W,3,Z-1:Output(W,2,Str7:1→R:Z-2→A:θ-2→B
+End:End:End:End:End:End:End:End:End:End
+Lbl W:DelVar R:10→M
+Output(1,1,"BOSS 
+Output(1,8,P
+Output(1,θ-4,"S+MAG
+Output(4,2,"P
+Output(Z-1,5,"T
+Output(4,θ,"π
+Z-2→T
+θ-2→U
+Repeat R:getKey→K:If Ans
+Output(A,B," 
+min(Z-1,max(3,A+sum(DeltaList(Ans={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,B,"θ
+Output(T,5,".
+Output(4,U,"Z
+If P≤0:Then:Goto P:Else
+If K=23 or K=11:Then:Goto B:Else
+If T=3:Then:Output(T,5," ":Z-2→T:Else:T-1→T:Output(T+1,5," 
+If U=θ-2:Then:Output(4,U," ":3→U:Else:U+1→U:Output(4,U-1," 
+If (A=T and B=5) or (A=Z-1 and B=5) or (A=4 and B=U):Then:P-1→P:For(W,3,Z-1:Output(W,2,Str7:End:Goto W:Else
+If K=21 and B<θ-1:Then:Output(A,B+1,"⁻
+rand(20-9C:Output(A,B+1," 
+Else
+If K=31 and B>3:Then:Output(A,B-2,"G
+rand(20-9C):Output(A,B-2,"
+If A=4 and B=4:Then:ClrDraw:Text(1,1,"WIZARD DROPPED THE
+Text(13,1,"BOSS KEY.":Text(28,1,"IT SHINES WITH AN
+Text(40,1,"EVIL PRESENCE.
+Pause :ClrDraw:Text(1,1,"YOU UNLOCK THE DOOR 
+Text(13,1,"TO THE THRONE. YOU
+Text(25,1,"BRAVELY OPEN IT
+Text(37,1,"AND STEP IN.
+Pause :ClrDraw:Text(1,1,"YOU MEET FACE-TO-
+Text(13,1,"FACE WITH A BUFF,
+Text(25,1,"SHADY CHARACTER.
+Text(37,1,"HE REVEALS HIMSELF AS
+Text(49,1,"A TERRORS GRUNT.
+Pause :ClrDraw
+For(W,3,Z-1:Output(W,2,Str7:1→R
+End:End:End:End:End:End:End:End:End:End:4→A:Ans→B
+Lbl Y:DelVar R:11→M:θ-2→U:Z-1→T:Ans→J
+Output(1,1,"BOSS 
+Output(1,8,P
+Output(1,θ-4,"S+MAG
+Repeat R:getKey→K:If Ans
+Output(A,B," 
+min(Z-1,max(3,A+sum(DeltaList(Ans={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,Ans,"θ
+Output(J,θ-1," 
+If T>A:T-.5→T:If T<A:T+.51→T
+int(T→J
+Output(J,θ-1,"H
+If P≤0:Goto P
+If K=23 or K=11:Then:Goto B:Else:Output(J,U,"*
+If U=2:Then:θ-2→U:Output(J,2," 
+Else:U-1→U:Output(J,U+1," 
+If A=J and (B=θ-1 or B=U:Then:P-1→P:For(W,3,Z-1:Output(W,2,Str7:End:Goto Y:Else
+If K=31 and B>3:Then:Output(A,B-2,"G
+rand(20-9C:Output(A,B-2," 
+Else
+If K=21 and B<θ-1:Then:Output(A,B+1,"⁻
+rand(20-9C:Output(A,B+1," 
+If A=J and B=θ-2:Then:For(W,3,Z-1:Output(W,2,Str7:End:ClrDraw:Text(1,1,"TERROR BOSS:
+Text(13,1,"YOU HAVE NOT BEATEN
+Text(25,1,"US YET. THERE IS
+Text(37,1,"STILL ONE GREATER.
+Text(49,1,"HE IS WAITING.
+Pause :ClrDraw:Text(1,1,"YOU WALK INTO A GRAY
+Text(13,1,"ROOM. IN THERE,
+Text(25,1,"A MENACING-LOOKING
+Text(37,1,"MAN APPROACHES YOU.
+Pause :ClrDraw:1→R:End:End:End:End:End:End:End:4→A:Ans→B
+Lbl Z:DelVar R:12→M:θ-1→U:4→T
+Output(1,8,P
+Output(1,θ-4,"S+MAG
+Output(1,1,"BOSS 
+Repeat R:getKey→K:If Ans
+Output(A,B," 
+Output(T,U," 
+min(Z-1,max(3,A+sum(DeltaList(Ans={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,B,"θ
+If A<T:T-1→T:If A>T:T+1→T
+If B<U:U-1→U:If B>U:U+1→U
+Output(T,U,"M
+If P≤0:Then:Goto P:Else
+If K=23 or K=11:Then:Goto B:Else
+If A=T and B=U:Then:For(W,3,Z-1:Output(W,2,Str7:End
+ClrDraw:Text(1,1,"A STRANGE ROBED SAGE
+Text(13,1,"RUSHES IN FRONT OF THE MAN
+Text(25,1,"OVER TO YOU. HE SAYS: FINALLY!
+Text(37,1,"I HAVE FOUND YOU!
+Text(49,1,"I NEED TO TELL YOU...
+Pause :ClrDraw:Text(1,1,"YOU ARE AN UVUTIAN,
+Text(13,1,"AND MY SON. DEFEAT
+Text(25,1,"THIS MAN AND LOCK
+Text(37,1,"THE EVIL OF THE WORLD
+Text(49,1,"AWAY FOREVER!
+Pause :ClrDraw:
+Text(1,1,"WATCH OUT! HE HAS USED
+Text(13,1,"OUR MAGIC TO DUPLICATE
+Text(25,1,"HIMSELF!
+Pause :ClrDraw
+Text(1,1,"THE SOURCE IS GLOWING!
+Text(13,1,"MAY IT STRENGTHEN YOU.
+Pause :ClrDraw:1→R:End:End:End:End
+DelVar R:4→A:Ans→B:1→I:Ans→E:Output(1,θ-4,"MAGIC
+Repeat R:getKey→K:If Ans:Output(A,B," 
+min(Z-1,max(3,A+sum(DeltaList(Ans={25,34→A
+min(θ-1,max(2,B+sum(DeltaList(K={24,26→B
+Output(A,B,"θ
+Output(5,3,"M
+Output(5,7,"M
+If P≤0:Then:Goto P:Else
+If K=23 or K=11:Then:Goto B:Else
+If (K=21 or K=31) and B<θ-1 and B>3:Then:Output(A,B+2,"G
+Output(A,B-2,"G
+rand(20-9C):Output(A,B+2," 
+Output(A,B-2," 
+1→J:Else
+If A=5 and BJ=5:Then:For(W,3,Z-1:Output(W,2,Str7:DelVar J:End:ClrDraw:Text(1,1,"AS THE BOSS OF TERRORS
+Text(13,1,"FADES, THE GRAY ROOM
+Text(25,1,"RETURNS TO COLOR. THE
+Text(37,1,"SAGE WALKS OVER TO YOU,
+Text(49,1,"AND YOU STRIDE OUT OF
+Pause :ClrDraw
+Text(1,1,"THE CASTLE, AFTER YOU
+Text(13,1,"RETURN THE TEN
+Text(25,1,"ARTIFACTS.
+Text(37,1,"CONGRATS, PLAYER, YOU WON!
+Pause :ClrDraw:Text(1,1,"-CREDITS-
+1:Text(13,Ans,"PRODUCED BY:
+Text(25,Ans,"TILDA^3 PROD.
+Text(37,Ans,"DIRECTOR:
+Text(49,Ans,"123OUTERME
+Pause :ClrDraw:Text(Ans,Ans,"WITH THE HELP OF:
+Text(13,Ans,"JWINSLOW23,
+Text(25,Ans,"CVSOFT, AND
+Text(37,Ans,"HKING1
+Text(49,Ans,"---------------
+Pause :ClrDraw:Text(1,1,"FIN.
+rand(20-9C
+ClrDraw:1→R
+End:End:End:End:End:ClrHome:{A,B,M,P→ʟSSAVE
+DelVar ADelVar BDelVar CDelVar DDelVar EDelVar FDelVar GDelVar HDelVar IDelVar JDelVar KDelVar LDelVar MDelVar NDelVar ODelVar PDelVar QDelVar RDelVar SDelVar TDelVar UDelVar VDelVar WDelVar XDelVar YDelVar ZDelVar θDelVar Str1DelVar Str2DelVar Str3DelVar Str4DelVar Str5DelVar Str6DelVar Str7DelVar Str8DelVar Str9DelVar Str0:Stop
