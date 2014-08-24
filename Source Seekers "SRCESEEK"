@@ -1,0 +1,78 @@
+:"SRCESEEK
+ClrDraw:AxesOff:FnOff :GridOff:0→Xmin:0→Ymin:96→Xmax:64→Ymax:DelVar RDelVar L:Text(1,1,"A TILDA^3 PRODUCTIONS
+Text(13,8,"-HIT THE ENTER KEY-
+0:Repeat Ans:getKey:End:If Ans≠105:Then:ClrDraw:Goto 0:Else
+[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1][1,0,1,0,0,0,1,0,0,0,1,0,0,0,1,1][1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1][1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1][1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1][1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1][1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0][1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1→[I]
+[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1][1,1,0,0,0,1,0,0,0,1,0,0,0,1,0,1][1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1][1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1][1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1][1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1][0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,1][1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1→[J]
+For(Y,1,8)
+For(X,1,16)
+If 1=[I](Y,X):Then
+Line(4X-2,57-6Y,4X-2,53-6Y)
+Line(4X-3,57-6Y,4X-3,53-6Y)
+End:End:End
+For(Y,1,8):For(X,1,16)
+If 1=[J](Y,X):Then
+Line(4X+26,57-6Y,4X+26,53-6Y)
+Line(4X+25,57-6Y,4X+25,53-6Y)
+End:End:End:Pause :ClrDraw
+Lbl 4:DelVar [I]DelVar [J]:Text(1,1,"SOURCE SEEKERS V1.3"):Text(13,1,"1. NEW GAME"):Text(25,1,"2. LOAD GAME"):Text(37,1,"3. HELP"):Text(49,1,"4. EXIT"):0
+Repeat Ans:getKey:End
+If Ans=102:Then:ClrList ʟSSAVE:End
+If Ans=92:Then:DelVar L:Goto H:End
+If Ans=93:Then:1→L:Goto F:End
+If Ans=94:Then:ClrDraw:Text(1,1,"THIS IS A PUZZLE AND
+Text(13,1,"ACTION GAME.
+Text(25,1,"USE THE ARROW KEYS TO MOVE,
+Text(37,1,"ATTACK USING 2ND, AND
+Text(49,1,"SAVE USING THE F1 KEY.
+Pause :ClrDraw:Text(1,1,"TEACHER KEY IS DEL.
+Text(13,1,"DO NOT RUN A DLC PACK
+Text(25,11,"If YOU DO NOT HAVE IT.
+Text(37,1,"USE ALPHA TO FIRE
+Text(49,11,"MAGIC ATTACKS.
+Pause :ClrDraw:Text(1,1,"SWORD HITS ONE
+Text(13,11,"STEP TO THE RIGHT,
+Text(25,1,"MAGIC HITS TWO 
+Text(37,11,"STEPS TO THE LEFT.
+Pause :ClrDraw:Text(1,1,"MADE BY 123OUTERME.
+Text(13,1,"CONTRIBUTORS:
+Text(25,11,"CVSOFT
+Text(37,11,"JWINSLOW23
+Text(49,11,"HKING1
+Pause :ClrDraw:1:End
+If Ans=82:Then:ClrDraw:ClrHome:Return:End
+Lbl 0:Goto 4:Lbl F:End:DelVar I
+If not(L or (ʟSSAVE(1) and ʟSSAVE(2:Then:Goto H:Else
+ʟSSAVE(1:Ans→A:ʟSSAVE(2:Ans→B
+ʟSSAVE(3:Ans→M:ʟSSAVE(4:Ans→P
+If M≥1 and M≤12:Then:prgmθDEF:Goto 3:End
+Lbl H:End:DelVar M:SetUpEditor ʟSSAVE
+{3,3,0,3,0→ʟSSAVE
+3→P
+ClrDraw:Lbl 3:0
+Text(1,1,"MAP SET?")
+Text(13,8,"1. DEFAULT")
+Text(25,8,"2. DLC PACK 1")
+Text(37,8,"3. DLC PACK 2")
+Repeat Ans:getKey:End
+If Ans=92:Then:1→M
+Ans→ʟSSAVE(3
+prgmθDEF
+End
+If Ans=93
+Then
+1→D
+prgmθDLC
+End
+If Ans=94
+Then
+2→D
+prgmθDLC
+End
+If Ans=23
+Then
+ClrDraw
+ClrHome
+Stop
+End
+Goto 3
