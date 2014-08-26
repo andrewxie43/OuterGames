@@ -75,7 +75,7 @@ Text(52,1,"OWNED BY A HERO.
 Pause :ClrDraw:1→R:4→A:A→B
 For(W,3,Z-1:Output(W,2,Str7
 End:End:End:End:End:End:End:End:End
-Lbl E:DelVar R:3→M:Z-2→T:θ-2→U:T→I:U→E
+Lbl E:DelVar R3→M:Z-2→T:θ-2→U:T→I:U→E
 Output(1,4,M
 Output(1,8,P
 Output(1,θ-4,"SWORD
@@ -105,7 +105,7 @@ Pause :ClrDraw:1→R:4→A:A→B
 For(W,3,Z-1
 Output(W,2,Str7
 End:End:End:End:End:End
-Lbl G:4→M:"θ→Str1:DelVar R:Output(1,4,M:Output(1,8,P:Output(1,θ-4,"SWORD
+Lbl G:4→M:"θ→Str1:DelVar ROutput(1,4,M:Output(1,8,P:Output(1,θ-4,"SWORD
 Output(3,2,"^
 Output(Z-1,θ-1,"V
 Repeat R:getKey→K:If Ans
@@ -117,7 +117,7 @@ If K=23 or K=11:Goto B
 If P≤0:Then:Goto D:Else
 If A=3 and B=2:Then:Output(3,2,"^
 "ʟ"→Str1:1→H:Else
-If AH=Z-1 and B=θ-1:Then:DelVar H:Output(Z-1,θ-1,"V
+If AH=Z-1 and B=θ-1:Then:DelVar HOutput(Z-1,θ-1,"V
 Output(4,θ-1,"B
 "θ→Str1:1→I:Else
 If A=4 and BI=θ-1:Then:1→R:ClrDraw:Text(1,1,"FOUND A GLOWING BLADE
@@ -126,8 +126,7 @@ Text(28,1,"BLADE OF A SWORD.
 Pause :ClrDraw:4→A:A→B
 For(W,3,Z-1:Output(W,2,Str7
 End:End:End:End:End:End
-Lbl L:5→M:"θ→Str1:DelVar RDelVar I
-Output(1,4,M
+Lbl L:5→M:"θ→Str1:DelVar RDelVar IOutput(1,4,M
 Output(1,8,P
 Output(1,θ-4,"SWORD
 Output(3,3,"^
@@ -160,7 +159,7 @@ Text(25,1,"RUMBLING, AND BOTH
 Text(37,1,"SHARDS FLOAT OUT
 Text(49,1,"AND MERGE. IT NOW
 Pause :ClrDraw
-Text(1,1,"SHOWS A MAP LEADING"
+Text(1,1,"SHOWS A MAP LEADING
 Text(13,1,"TO A CASTLE. YOU
 Text(25,1,"START WALKING, AND
 Text(37,1,"SOON GET THERE.":Pause :ClrDraw
@@ -244,7 +243,7 @@ Text(40,1,"UVUTIAN.
 Pause :ClrDraw:1→R:4→A:A→B
 For(W,3,Z-1:Output(W,2,Str7
 End:End:End:End:End:End:End
-Lbl S:DelVar RDelVar H:8→M:4→A:Ans→B:1→I
+Lbl S:DelVar RDelVar H8→M:4→A:Ans→B:1→I
 Output(1,4,M
 Output(1,8,P
 Output(1,θ-4,"SWORD
@@ -261,7 +260,7 @@ If P≤0:Then:Goto P:Else
 If K=21 and B<θ-1:Then:Output(A,B+1,"⁻
 rand(20-9C):Output(A,B+1," 
 Else
-If AI=5 and B=5 and P<9:Then:P+1→P:Output(1,8,P:DelVar I:Else
+If AI=5 and B=5 and P<9:Then:P+1→P:Output(1,8,P:DelVar IElse
 If A=6 and B=6:Then:2→S:Output(1,θ-4,"S+MAG
 Else
 If K=21 and B<θ-1:Then:Output(A,B+1,"⁻
@@ -292,7 +291,7 @@ If (AF=3 and B=θ-2) or (A=Z-2 and BE=2):Then:P-1→P:For(W,3,Z-1):Output(W,2,St
 If K=21 and B<θ-1:Then:Output(A,B+1,"⁻
 rand(20-9C:Output(A,B+1," 
 1→I:Else
-If AI=3 and B=θ-3:Then:DelVar F:Else
+If AI=3 and B=θ-3:Then:DelVar FElse
 If K=31 and B>3:Then:Output(A,B-2,"G
 rand(20-9C):Output(A,B-2," 
 1→J:Else
@@ -303,7 +302,7 @@ Text(31,1,"THIS HORN HAS THE
 Text(43,1,"MARK OF THE TERRORS.
 Pause :ClrDraw:For(W,3,Z-1:Output(W,2,Str7:1→R:Z-2→A:θ-2→B
 End:End:End:End:End:End:End:End:End:End
-Lbl W:DelVar R:10→M
+Lbl W:DelVar R10→M
 Output(1,1,"BOSS 
 Output(1,8,P
 Output(1,θ-4,"S+MAG
@@ -377,7 +376,7 @@ Text(13,1,"ROOM. IN THERE,
 Text(25,1,"A MENACING-LOOKING
 Text(37,1,"MAN APPROACHES YOU.
 Pause :ClrDraw:1→R:End:End:End:End:End:End:End:4→A:Ans→B
-Lbl Z:DelVar R:12→M:θ-1→U:4→T
+Lbl Z:DelVar R12→M:θ-1→U:4→T
 Output(1,8,P
 Output(1,θ-4,"S+MAG
 Output(1,1,"BOSS 
